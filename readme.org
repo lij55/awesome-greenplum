@@ -28,7 +28,7 @@ This repo is under GPL v3.
 - [[#extension][Extension]]
   - [[#bundled][Bundled]]
   - [[#index][Index]]
-- [[#postgres-extension][Postgres Extension]]
+- [[#postgres-ecosystem][Postgres Ecosystem]]
   - [[#fdw-of-pg][fdw of pg]]
   - [[#etl-of-pg][etl of pg]]
   - [[#moniter-of-pg][moniter of pg]]
@@ -36,6 +36,7 @@ This repo is under GPL v3.
   - [[#utility-of-pg][utility of pg]]
   - [[#backup-of-pg][backup of pg]]
   - [[#audit-of-pg][audit of pg]]
+  - [[#enhancement-of-pg][enhancement of pg]]
 - [[#community][Community]]
 
 * Official Component
@@ -62,6 +63,11 @@ As the largest Greenplum contributer, Pivotal has a lot of open source projects 
 - [[https://github.com/sosedoff/pgweb][pgweb]] - web based cross-platform client for PostgreSQL databases
 - [[https://github.com/dbeaver/dbeaver][dbeaver]] - Free universal database tool and GUI SQL client in Java
 - [[https://github.com/postgres/pgadmin4][pgadmin 4]] - pgAdmin 4 is a rewrite of the popular pgAdmin3 management tool for PostgreSQL. It is  is written as a web application in Python, using jQuery and Bootstrap for the client side processing and UI
+- [[https://github.com/vrana/adminer][adminer]] - Database management in a single PHP file
+- [[https://github.com/pgmodeler/pgmodeler][pgmodeler]] - PostgreSQL Database Modeler - is an open source data modeling tool designed for PostgreSQL
+- [[https://github.com/phppgadmin/phppgadmin][phppgadmin]] - the premier web-based administration tool for postgresql
+- [[https://github.com/xo/usql][usql]] - Universal command-line interface for SQL databases.
+
 
 * Driver
 Most drivers of Postgres can work well with Greenplum.
@@ -71,7 +77,7 @@ Most drivers of Postgres can work well with Greenplum.
 - [[https://github.com/jackc/pgx][pgx]] - Another pure Go driver and toolkit for PostgreSQL.
 - [[http://initd.org/psycopg/][psycopg 2]] - Psycopg is the most popular PostgreSQL adapter for the Python programming language. At its core it fully implements the Python DB API 2.0 specifications.
 - [[https://github.com/MagicStack/asyncpg][asyncpg]] - A fast PostgreSQL Database Client Library for Python/asyncio.
-
+- [[https://github.com/gmr/queries][queries]] - Queries is a BSD licensed opinionated wrapper of the psycopg2 library for interacting with PostgreSQL.
 
 * Connection Pool
 - [[https://www.pgpool.net/mediawiki/index.php/Main_Page][pgpool2]] - Pgpool-II is a middleware that works between PostgreSQL servers and a PostgreSQL database client that support connection pool, replication and load balance, etc.
@@ -106,7 +112,7 @@ Greenplum ship pl/tcl, pl/perl, pl/pgsql and pl/python together with its source 
 - [[https://github.com/greenplum-db/gpdb/tree/master/gpcontrib][gpcontrib]] - Greenplum special extensions.
 ** Index
 - [[https://github.com/zeromax007/gpdb-roaringbitmap][roaring bitmap]] - RoaringBitmap extension for greenplum-db
-* Postgres Extension 
+* Postgres Ecosystem
 Most postgres extensions can work on Greenplum so long as it is not MPP sensitive. It can run on master node just as what it does for Postgres by default.
 ** fdw of pg
 - [[https://wiki.postgresql.org/wiki/Foreign_data_wrappers][fdw list]] - this is the fdw extension list on Postgres wiki site
@@ -122,6 +128,10 @@ Most postgres extensions can work on Greenplum so long as it is not MPP sensitiv
 - [[https://github.com/jwdeitch/pg_migrate][pg_migrate]] - Manage postgres schema, triggers, procedures, and views.
 - [[https://github.com/lukasmartinelli/pgfutter][pgfutter]] - Import CSV and JSON into PostgreSQL the easy way
 - [[https://github.com/lanyrd/mysql-postgresql-converter][mysql-postgresql-converter]] - Lanyrd's MySQL to PostgreSQL conversion script.
+- [[https://github.com/lacanoid/pgddl][pgddl]] - DDL eXtractor functions for PostgreSQL (ddlx)
+- [[https://github.com/golang-migrate/migrate][migrate]] - Database migrations written in Go. Use as CLI or import as library.
+- [[https://github.com/blind-oracle/psql-streamer][psql-streamer]] - Stream database events from PostgreSQL to Kafka
+
 
 ** moniter of pg
 - [[https://github.com/julmon/pg_activity][pg_activity]] - pg_activity is a top like application for PostgreSQL server activity monitoring.
@@ -154,16 +164,25 @@ Most postgres extensions can work on Greenplum so long as it is not MPP sensitiv
 - [[https://github.com/darold/pgbadger][pgbadger]] - Fast PostgreSQL Log Analyzer.
 - [[https://github.com/fordfrog/apgdiff][apgdiff]] - Another PostgreSQL Diff Tool 
 - [[https://github.com/pgxn/pgxnclient][pgxnclient]] - A command line client for the PostgreSQL Extension Network.
+- [[https://github.com/ibarwick/config_log][config_log]] - PostgreSQL custom background worker (BGW) for monitoring configuration log changes
+- [[https://gitlab.com/dalibo/postgresql_anonymizer][postgresql_anonymizer]] - postgresql_anonymizer is an extension to mask or replace personally identifiable information (PII) or commercially sensitive data from a PostgreSQL database.
+- [[https://github.com/orafce/orafce][orafce]] - The "orafce" project implements of some functions from the Oracle database.
 
 ** backup of pg
 TO BE FINISHED
 
 ** audit of pg
 - [[https://github.com/pgMemento/pgMemento][pgMemento]] - Audit trail with schema versioning for PostgreSQL using transaction-based logging
+- [[https://github.com/perseas/Pyrseas][Pyrseas]] - Provides utilities for Postgres database schema versioning.
 - [[https://bitbucket.org/neadwerx/cyanaudit][cyanaudit]] - Cyan Audit is a PostgreSQL utility providing comprehensive and easily-searchable logs of DML (INSERT/UPDATE/DELETE) activity in your database.
 - [[https://github.com/pgaudit/pgaudit][pgaudit]] - PostgreSQL Audit Extension
 - [[https://github.com/kvesteri/postgresql-audit][postgresql-audit]] - Audit trigger for PostgreSQL
+- [[https://github.com/dalibo/emaj/][e-maj]] - logs and rollbacks table updates
+- [[https://github.com/cybertec-postgresql/pg_permission][pg_permission]] - A simple set of views to see ALL permissions in a PostgreSQL database
+- [[https://github.com/arkhipov/temporal_tables][temporal_tables]] - A temporal table is a table that records the period of time when a row is valid
 
+** enhancement of pg 
+TO BE FINISHED
 
 * Community
 - [[https://greenplum.org/][greenplum.org]] - official website of Greenplum

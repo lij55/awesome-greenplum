@@ -35,6 +35,8 @@ This repo is under GPL v3.
   - [[#fdw][fdw]]
   - [[#etl][etl]]
   - [[#moniter][moniter]]
+  - [[#utility-1][Utility]]
+  - [[#develop][Develop]]
 - [[#community][Community]]
 
 * Official Components
@@ -71,7 +73,6 @@ Most drivers of Postgres can work well with Greenplum.
 - [[https://github.com/jackc/pgx][pgx]] - Another pure Go driver and toolkit for PostgreSQL.
 - [[http://initd.org/psycopg/][psycopg 2]] - Psycopg is the most popular PostgreSQL adapter for the Python programming language. At its core it fully implements the Python DB API 2.0 specifications.
 - [[https://github.com/MagicStack/asyncpg][asyncpg]] - A fast PostgreSQL Database Client Library for Python/asyncio.
-- [[https://github.com/aio-libs/aiopg][aiopg]] - aiopg is a library for accessing a PostgreSQL database from the asyncio.
 
 
 * Connection Pool
@@ -121,8 +122,43 @@ Note: there is no guarantee that those extensions can work well on whole Greenpl
 - [[https://github.com/ankane/pgsync][pgsync]] - Sync Postgres data between databases
 - [[https://github.com/ossc-db/pg_bulkload][pg_bulkload]] - High speed data loading utility for PostgreSQL
 - [[https://github.com/jwdeitch/pg_migrate][pg_migrate]] - Manage postgres schema, triggers, procedures, and views.
+- [[https://github.com/lukasmartinelli/pgfutter][pgfutter]] - Import CSV and JSON into PostgreSQL the easy way
+- [[https://github.com/lanyrd/mysql-postgresql-converter][mysql-postgresql-converter]] - Lanyrd's MySQL to PostgreSQL conversion script.
+
+
 ** moniter
-TO BE FINISHED
+- [[https://github.com/julmon/pg_activity][pg_activity]] - pg_activity is a top like application for PostgreSQL server activity monitoring.
+- [[https://github.com/cybertec-postgresql/pgwatch2][pgwatch2]] - PostgreSQL metrics monitor/dashboard
+- [[https://github.com/zalando/pg_view][pg_view]] - Get a detailed, real-time view of your PostgreSQL database and system metrics
+- [[https://github.com/bucardo/check_postgres][check_postgres]] - Nagios check_postgres plugin for checking status of PostgreSQL databases.
+- [[https://github.com/OPMDG/check_pgactivity][check_pgactivity]] - Nagios remote agent 
+- [[https://github.com/spotify/postgresql-metrics][postgresql-metrics]] - Tool that extracts and provides metrics on your PostgreSQL database.
+- [[https://github.com/cavaliercoder/libzbxpgsql][libzbxpgsql]] - Monitor PostgreSQL with Zabbix
+- [[https://github.com/netdata/netdata][netdata]] - full feature and real-time performance monitoring including postgres
+- [[https://github.com/lesovsky/pgcenter][pgcenter]] - Command-line admin tool for observing and troubleshooting Postgres.
+- [[https://github.com/pganalyze/collector][pganalyze]] - pganalyze statistics collector for gathering PostgreSQL metrics and log data
+- [[https://github.com/lafikl/pginsight][pginsight]] - CLI tool to easily dig deep inside your Postgresql database.
+- [[https://github.com/lob/pg_insights][pg_insights]] - Convenient SQL for monitoring Postgres database health.
+- [[https://github.com/spotify/postgresql-metrics][postgresql-metrics]] - Tool that extracts and provides metrics on your PostgreSQL database.
+- [[https://gitlab.com/postgres-ai/postgres-checkup][postgres-checkup]] - Postgres Health Check and SQL Performance Analysis.
+- [[https://github.com/kirs/pg_web_stats][pg_web_stats]] - Web UI to view pg_stat_statements
+
+
+** Utility
+- [[https://github.com/cbbrowne/pgcmp][pgcmp]] - Tool for comparing Postgres database schemas
+- [[https://github.com/sqitchers/sqitch][sqitch]] - Sane database change management 
+- [[https://github.com/PostgREST/postgrest][postgrest]] - REST API for any Postgres database
+- [[https://github.com/prest/prest][prest]] - pREST is a way to serve a RESTful API from any databases written in Go
+- [[https://github.com/darold/pgbadger][pgbadger]] - Fast PostgreSQL Log Analyzer.
+- [[https://github.com/fordfrog/apgdiff][apgdiff]] - Another PostgreSQL Diff Tool 
+
+
+** Develop
+- [[https://github.com/okbob/plpgsql_check][plpgsql_check]] - plpgsql_check is next generation of plpgsql_lint. It allows to check source code by explicit call plpgsql_check_function.
+- [[https://github.com/theory/pgtap/][pgtap]] - PostgreSQL Unit Testing Suite 
+- [[https://github.com/jarulraj/sqlcheck-old][sqlcheck]] - Automatically identify anti-patterns in SQL queries
+- [[https://github.com/gajus/pg-formatter][pg-formatter]] - A PostgreSQL SQL syntax beautifier.
+
 
 * Community
 - [[https://greenplum.org/][greenplum.org]] - official website of Greenplum
@@ -130,4 +166,4 @@ TO BE FINISHED
 - [[http://gpadmin.me/][gpadmin.me]] - Scott Kahler's personal blog about Greenplum
 - [[http://www.pivotalguru.com/][pivotalguru]] - Jon Roberts' personal blog about Greenplum and others
 - [[https://greenplum.slack.com/][greenplum.slack.com]] - slack channel
-
+  

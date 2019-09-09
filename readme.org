@@ -35,6 +35,10 @@ This repo is under GPL v3.
   - [[#fdw][fdw]]
   - [[#etl][etl]]
   - [[#moniter][moniter]]
+  - [[#develop][Develop]]
+  - [[#utility-1][Utility]]
+  - [[#backup][Backup]]
+  - [[#audit][Audit]]
 - [[#community][Community]]
 
 * Official Components
@@ -106,14 +110,63 @@ Greenplum ship pl/tcl, pl/perl, pl/pgsql and pl/python together with its source 
 ** Index
 - [[https://github.com/zeromax007/gpdb-roaringbitmap][roaring bitmap]] - RoaringBitmap extension for greenplum-db
 * Postgres Extension 
-Greenplum is based on Postgres which means it shares the same kernel function  with as Postgres with related version number. Most postgres extensions can work on Greenplum so long as it is not MPP sensitive. It can run on master node just as what it does for Postgres by default.
-Note: there is no guarantee that those extensions can work well on whole Greenplum cluster.
+Most postgres extensions can work on Greenplum so long as it is not MPP sensitive. It can run on master node just as what it does for Postgres by default.
 ** fdw
-TO BE FINISHED
+- [[https://wiki.postgresql.org/wiki/Foreign_data_wrappers][fdw list]] - this is the fdw extension list on Postgres wiki site
 ** etl
-TO BE FINISHED
+- [[https://github.com/yandex/pgmigrate][pgmigrate]] - Simple tool to evolve PostgreSQL schema easily.
+- [[https://github.com/the4thdoctor/pg_chameleon][pg_chameleon]] - MySQL to PostgreSQL replica system 
+- [[https://github.com/flyway/flyway][flyway]] - Data base migration tools. Support a lot of kinds of databases.
+- [[https://github.com/darold/ora2pg][ora2pg]] - Ora2Pg is a free tool used to migrate an Oracle database to a PostgreSQL compatible schema.
+- [[https://github.com/lukasmartinelli/pgclimb][pgclimb]] - Export data from PostgreSQL into different data formats.
+- [[https://github.com/dimitri/pgloader][pgloader]] - pgloader is a data loading tool for PostgreSQL, using the COPY command.
+- [[https://github.com/ankane/pgsync][pgsync]] - Sync Postgres data between databases
+- [[https://github.com/ossc-db/pg_bulkload][pg_bulkload]] - High speed data loading utility for PostgreSQL
+- [[https://github.com/jwdeitch/pg_migrate][pg_migrate]] - Manage postgres schema, triggers, procedures, and views.
+- [[https://github.com/lukasmartinelli/pgfutter][pgfutter]] - Import CSV and JSON into PostgreSQL the easy way
+- [[https://github.com/lanyrd/mysql-postgresql-converter][mysql-postgresql-converter]] - Lanyrd's MySQL to PostgreSQL conversion script.
+
 ** moniter
+- [[https://github.com/julmon/pg_activity][pg_activity]] - pg_activity is a top like application for PostgreSQL server activity monitoring.
+- [[https://github.com/cybertec-postgresql/pgwatch2][pgwatch2]] - PostgreSQL metrics monitor/dashboard
+- [[https://github.com/zalando/pg_view][pg_view]] - Get a detailed, real-time view of your PostgreSQL database and system metrics
+- [[https://github.com/bucardo/check_postgres][check_postgres]] - Nagios check_postgres plugin for checking status of PostgreSQL databases.
+- [[https://github.com/OPMDG/check_pgactivity][check_pgactivity]] - Nagios remote agent 
+- [[https://github.com/spotify/postgresql-metrics][postgresql-metrics]] - Tool that extracts and provides metrics on your PostgreSQL database.
+- [[https://github.com/cavaliercoder/libzbxpgsql][libzbxpgsql]] - Monitor PostgreSQL with Zabbix
+- [[https://github.com/netdata/netdata][netdata]] - full feature and real-time performance monitoring including postgres
+- [[https://github.com/lesovsky/pgcenter][pgcenter]] - Command-line admin tool for observing and troubleshooting Postgres.
+- [[https://github.com/pganalyze/collector][pganalyze]] - pganalyze statistics collector for gathering PostgreSQL metrics and log data
+- [[https://github.com/lafikl/pginsight][pginsight]] - CLI tool to easily dig deep inside your Postgresql database.
+- [[https://github.com/lob/pg_insights][pg_insights]] - Convenient SQL for monitoring Postgres database health.
+- [[https://github.com/spotify/postgresql-metrics][postgresql-metrics]] - Tool that extracts and provides metrics on your PostgreSQL database.
+- [[https://gitlab.com/postgres-ai/postgres-checkup][postgres-checkup]] - Postgres Health Check and SQL Performance Analysis.
+- [[https://github.com/kirs/pg_web_stats][pg_web_stats]] - Web UI to view pg_stat_statements
+
+** Develop
+- [[https://github.com/okbob/plpgsql_check][plpgsql_check]] - plpgsql_check is next generation of plpgsql_lint. It allows to check source code by explicit call plpgsql_check_function.
+- [[https://github.com/theory/pgtap/][pgtap]] - PostgreSQL Unit Testing Suite 
+- [[https://github.com/jarulraj/sqlcheck-old][sqlcheck]] - Automatically identify anti-patterns in SQL queries
+- [[https://github.com/gajus/pg-formatter][pg-formatter]] - A PostgreSQL SQL syntax beautifier.
+- [[https://github.com/PostgREST/postgrest][postgrest]] - REST API for any Postgres database
+- [[https://github.com/prest/prest][prest]] - pREST is a way to serve a RESTful API from any databases written in Go
+
+** Utility
+- [[https://github.com/cbbrowne/pgcmp][pgcmp]] - Tool for comparing Postgres database schemas
+- [[https://github.com/sqitchers/sqitch][sqitch]] - Sane database change management 
+- [[https://github.com/darold/pgbadger][pgbadger]] - Fast PostgreSQL Log Analyzer.
+- [[https://github.com/fordfrog/apgdiff][apgdiff]] - Another PostgreSQL Diff Tool 
+- [[https://github.com/pgxn/pgxnclient][pgxnclient]] - A command line client for the PostgreSQL Extension Network.
+
+** Backup
 TO BE FINISHED
+
+** Audit
+- [[https://github.com/pgMemento/pgMemento][pgMemento]] - Audit trail with schema versioning for PostgreSQL using transaction-based logging
+- [[https://bitbucket.org/neadwerx/cyanaudit][cyanaudit]] - Cyan Audit is a PostgreSQL utility providing comprehensive and easily-searchable logs of DML (INSERT/UPDATE/DELETE) activity in your database.
+- [[https://github.com/pgaudit/pgaudit][pgaudit]] - PostgreSQL Audit Extension
+- [[https://github.com/kvesteri/postgresql-audit][postgresql-audit]] - Audit trigger for PostgreSQL
+
 
 * Community
 - [[https://greenplum.org/][greenplum.org]] - official website of Greenplum
@@ -121,4 +174,4 @@ TO BE FINISHED
 - [[http://gpadmin.me/][gpadmin.me]] - Scott Kahler's personal blog about Greenplum
 - [[http://www.pivotalguru.com/][pivotalguru]] - Jon Roberts' personal blog about Greenplum and others
 - [[https://greenplum.slack.com/][greenplum.slack.com]] - slack channel
-
+  

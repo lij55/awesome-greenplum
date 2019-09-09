@@ -37,6 +37,7 @@ This repo is under GPL v3.
   - [[#moniter][moniter]]
   - [[#utility-1][Utility]]
   - [[#develop][Develop]]
+  - [[#audit][Audit]]
 - [[#community][Community]]
 
 * Official Components
@@ -151,7 +152,7 @@ Note: there is no guarantee that those extensions can work well on whole Greenpl
 - [[https://github.com/prest/prest][prest]] - pREST is a way to serve a RESTful API from any databases written in Go
 - [[https://github.com/darold/pgbadger][pgbadger]] - Fast PostgreSQL Log Analyzer.
 - [[https://github.com/fordfrog/apgdiff][apgdiff]] - Another PostgreSQL Diff Tool 
-
+- [[https://github.com/pgxn/pgxnclient][pgxnclient]] - A command line client for the PostgreSQL Extension Network.
 
 ** Develop
 - [[https://github.com/okbob/plpgsql_check][plpgsql_check]] - plpgsql_check is next generation of plpgsql_lint. It allows to check source code by explicit call plpgsql_check_function.
@@ -159,6 +160,12 @@ Note: there is no guarantee that those extensions can work well on whole Greenpl
 - [[https://github.com/jarulraj/sqlcheck-old][sqlcheck]] - Automatically identify anti-patterns in SQL queries
 - [[https://github.com/gajus/pg-formatter][pg-formatter]] - A PostgreSQL SQL syntax beautifier.
 
+
+** Audit
+- [[https://github.com/pgMemento/pgMemento][pgMemento]] - Audit trail with schema versioning for PostgreSQL using transaction-based logging
+- [[https://bitbucket.org/neadwerx/cyanaudit][cyanaudit]] - Cyan Audit is a PostgreSQL utility providing comprehensive and easily-searchable logs of DML (INSERT/UPDATE/DELETE) activity in your database.
+- [[https://github.com/pgaudit/pgaudit][pgaudit]] - PostgreSQL Audit Extension
+- [[https://github.com/kvesteri/postgresql-audit][postgresql-audit]] - Audit trigger for PostgreSQL
 
 * Community
 - [[https://greenplum.org/][greenplum.org]] - official website of Greenplum

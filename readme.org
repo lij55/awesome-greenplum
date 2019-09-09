@@ -1,0 +1,124 @@
+#+HTML_HEAD: <link rel="stylesheet" href="http://dakrone.github.io/org.css" type="text/css" />
+#+OPTIONS: html-postamble:nil author:nil date:nil num:nil toc:nil H:2 @:t ::t |:t ^:nil -:t f:t *:t <:t
+#+EXPORT_FILE_NAME: index
+#+TITLE: awesome-greenplum
+
+
+[[https://upload.wikimedia.org/wikipedia/commons/9/97/Greenplumlogotype.jpg]]
+
+Greenplum is the most advanced MPP big data platform. This repo list the compatible open source utilities and extensions.
+
+Why another repo? The [[https://github.com/kongyew/awesome-greenplum][old one]] is on longer maintained and out-of-date.
+
+This repo focus on open source and community tools. No commercial, no ads. Feel free to create issues and PRs if you think there is anything missing.
+
+This repo is under GPL v3.
+
+#+TOC: headlines 2
+
+* Content :TOC:noexport:
+- [[#official-components][Official Components]]
+- [[#monitor][Monitor]]
+- [[#performance-test][Performance test]]
+- [[#client-tool][Client tool]]
+- [[#driver][Driver]]
+- [[#connection-pool][Connection Pool]]
+- [[#utility][Utility]]
+- [[#data-flow][Data flow]]
+  - [[#as-target][as target]]
+  - [[#as-source][as source]]
+- [[#procedural-language][Procedural Language]]
+- [[#extension][Extension]]
+  - [[#bundled][Bundled]]
+  - [[#index][Index]]
+- [[#postgres-extension][Postgres Extension]]
+  - [[#fdw][fdw]]
+  - [[#etl][etl]]
+  - [[#moniter][moniter]]
+- [[#community][Community]]
+
+* Official Components
+As the largest Greenplum contributer, Pivotal has a lot of open source projects for Greenplum. This category lists  open sources Greenplum components from Pivotal. Most of them are bundled in Pivotal Greenplum distribution.
+- [[https://github.com/greenplum-db/gpdb][gpdb]] - Greenplum Database itself
+- [[https://github.com/greenplum-db/gporca][ORCA]] - ORCA is the planner optimizer for both Greenplum and Postgres. It has very good performance for complex queries with partition tables.
+- [[https://github.com/apache/madlib][MADlib]] - MADlib is the machine learning and deep learning libraries for both Greenplum and Postgres.
+- [[https://github.com/greenplum-db/pxf][PXF]] - PXF is an extensible framework that allows a distributed database like GPDB to query external data files.
+- [[https://github.com/greenplum-db/gpbackup][gpbackup]] - GPBackup is the official "GPDB Backup Utility"
+- [[https://github.com/greenplum-db/gpupgrade][gpupgrade]] - Greenplum Database major version upgrade utility called gpupgrade
+- [[https://github.com/greenplum-db/plcontainer][pl/container]] - PL/Container is GPDB execution sandboxing for Python and R
+- [[https://github.com/greenplum-db/diskquota][diskquota]] - PostgreSQL disk quota extension
+
+* Monitor
+
+* Performance test
+- [[https://github.com/pivotalguru/TPC-H][tpc-h]] - Traditional OLAP test.
+- [[https://github.com/pivotalguru/TPC-DS][tpc-ds]] - Data warehouse test.
+- pgbench - Bundled TPC-B performance tools for Postgres and Greenplum.
+- [[https://github.com/akopytov/sysbench][sysbench]] - Performance test utility for postgres, mysql, CUP, memory, IO, etc.
+
+* Client tool
+- psql - Bundled official client tool
+- [[https://github.com/dbcli/pgcli][pgcli]] - pgcli is Postgres CLI with autocompletion and syntax highlighting
+- [[https://github.com/sosedoff/pgweb][pgweb]] - web based cross-platform client for PostgreSQL databases
+- [[https://github.com/dbeaver/dbeaver][dbeaver]] - Free universal database tool and GUI SQL client in Java
+- [[https://github.com/postgres/pgadmin4][pgadmin 4]] - pgAdmin 4 is a rewrite of the popular pgAdmin3 management tool for PostgreSQL. It is  is written as a web application in Python, using jQuery and Bootstrap for the client side processing and UI
+
+* Driver
+Most drivers of Postgres can work well with Greenplum.
+- [[https://odbc.postgresql.org/][psqlODBC]] - psqlODBC is the official PostgreSQL ODBC Driver
+- [[https://jdbc.postgresql.org/][pgjdbc]] - pgjdbc is an open source JDBC driver written in Pure Java (Type 4), and communicates in the PostgreSQL native network protocol.
+- [[https://github.com/lib/pq][pg]] - Pure Go Postgres driver for database/sql.
+- [[https://github.com/jackc/pgx][pgx]] - Another pure Go driver and toolkit for PostgreSQL.
+- [[http://initd.org/psycopg/][psycopg 2]] - Psycopg is the most popular PostgreSQL adapter for the Python programming language. At its core it fully implements the Python DB API 2.0 specifications.
+- [[https://github.com/MagicStack/asyncpg][asyncpg]] - A fast PostgreSQL Database Client Library for Python/asyncio.
+
+
+* Connection Pool
+- [[https://www.pgpool.net/mediawiki/index.php/Main_Page][pgpool2]] - Pgpool-II is a middleware that works between PostgreSQL servers and a PostgreSQL database client that support connection pool, replication and load balance, etc.
+- [[https://github.com/pgbouncer/pgbouncer][pgbouncer]] - lightweight and fast connection pooler for PostgreSQL based on libevent.
+- [[https://github.com/awslabs/pgbouncer-rr-patch][pgbouncer-rr]] - A patch of pgbouncer that support query routing and rewrite. It can only be used on AWS because of its license.
+- [[https://github.com/yandex/odyssey][odyssey]] - Scalable PostgreSQL connection pooler from yandex
+
+
+* Utility
+
+* Data flow
+This section list all ETL(extract-transform-load) and CDC (changed-data capture) tools that support Greenplum as source and target.
+** as target
+- gpfdist - Bundled super fast data loading utility of Greenplum.
+- [[https://github.com/pivotalguru/outsourcer][outsourcer]] - Outsourcer automates the tasks typically done manually by ETL developers to source data from SQL Server and Oracle and load into Greenplum database.  
+- [[https://github.com/pivotalguru/gplink][gplink]] - GPLink links JDBC connections to Greenplum External Tables.
+- [[https://github.com/pentaho/pentaho-kettle][kettle]] - Pentaho Data Integration ( ETL ) a.k.a Kettle
+** as source
+
+* Procedural Language
+Greenplum ship pl/tcl, pl/perl, pl/pgsql and pl/python together with its source code. Below are the available procedural languages.
+- [[https://github.com/greenplum-db/pljava][pljava]] - This is version of PL/Java is modified by Greenplum. It is based on [[https://github.com/tada/pljava/tree/V1_5_0][pl/java 1.5.0]].
+- [[https://github.com/petere/plsh][pl/sh]] - PL/sh is a procedural language handler for PostgreSQL that allows you to write stored procedures in a shell of your choice.
+- [[https://github.com/microo8/plgo][plgo]] - easily create postgresql extensions in golang
+- [[https://github.com/RhodiumToad/pllua-ng][pllua-ng]] - Re-implementation of pllua, embedded Lua for postgresql
+- [[https://github.com/pllua/pllua][pllua]] - PL/Lua is an implementation of Lua as a loadable procedural language for PostgreSQL
+
+* Extension
+** Bundled
+- [[https://github.com/greenplum-db/gpdb/tree/master/contrib][contrib]] - all support postgres extensions in Greenplum source code.
+- [[https://github.com/greenplum-db/gpdb/tree/master/gpcontrib][gpcontrib]] - Greenplum special extensions.
+** Index
+- [[https://github.com/zeromax007/gpdb-roaringbitmap][roaring bitmap]] - RoaringBitmap extension for greenplum-db
+* Postgres Extension 
+Greenplum is based on Postgres which means it shares the same kernel function  with as Postgres with related version number. Most postgres extensions can work on Greenplum so long as it is not MPP sensitive. It can run on master node just as what it does for Postgres by default.
+Note: there is no guarantee that those extensions can work well on whole Greenplum cluster.
+** fdw
+TO BE FINISHED
+** etl
+TO BE FINISHED
+** moniter
+TO BE FINISHED
+
+* Community
+- [[https://greenplum.org/][greenplum.org]] - official website of Greenplum
+- [[https://greenplum.cn/][greenplum.cn]] - Chinese community website
+- [[http://gpadmin.me/][gpadmin.me]] - Scott Kahler's personal blog about Greenplum
+- [[http://www.pivotalguru.com/][pivotalguru]] - Jon Roberts' personal blog about Greenplum and others
+- [[https://greenplum.slack.com/][greenplum.slack.com]] - slack channel
+

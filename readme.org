@@ -6,19 +6,16 @@
 
 [[https://upload.wikimedia.org/wikipedia/commons/9/97/Greenplumlogotype.jpg]]
 
-Greenplum is the most advanced MPP big data platform. This repo list the compatible open source utilities and extensions.
+Greenplum is the most advanced open source MPP big data platform. This repo list the compatible open source utilities and extensions. No commercial, no ads. Feel free to create issues and PRs if you know there is anything missing.
 
 Why another repo? The [[https://github.com/kongyew/awesome-greenplum][old one]] is on longer maintained and out-of-date.
-
-This repo focus on open source and community tools. No commercial, no ads. Feel free to create issues and PRs if you think there is anything missing.
 
 This repo is under GPL v3.
 
 #+TOC: headlines 2
 
 * Content :TOC:noexport:
-- [[#official-components][Official Components]]
-- [[#monitor][Monitor]]
+- [[#official-component][Official Component]]
 - [[#performance-test][Performance test]]
 - [[#client-tool][Client tool]]
 - [[#driver][Driver]]
@@ -32,16 +29,16 @@ This repo is under GPL v3.
   - [[#bundled][Bundled]]
   - [[#index][Index]]
 - [[#postgres-extension][Postgres Extension]]
-  - [[#fdw][fdw]]
-  - [[#etl][etl]]
-  - [[#moniter][moniter]]
-  - [[#develop][Develop]]
-  - [[#utility-1][Utility]]
-  - [[#backup][Backup]]
-  - [[#audit][Audit]]
+  - [[#fdw-of-pg][fdw of pg]]
+  - [[#etl-of-pg][etl of pg]]
+  - [[#moniter-of-pg][moniter of pg]]
+  - [[#development-of-pg][development of pg]]
+  - [[#utility-of-pg][utility of pg]]
+  - [[#backup-of-pg][backup of pg]]
+  - [[#audit-of-pg][audit of pg]]
 - [[#community][Community]]
 
-* Official Components
+* Official Component
 As the largest Greenplum contributer, Pivotal has a lot of open source projects for Greenplum. This category lists  open sources Greenplum components from Pivotal. Most of them are bundled in Pivotal Greenplum distribution.
 - [[https://github.com/greenplum-db/gpdb][gpdb]] - Greenplum Database itself
 - [[https://github.com/greenplum-db/gporca][ORCA]] - ORCA is the planner optimizer for both Greenplum and Postgres. It has very good performance for complex queries with partition tables.
@@ -52,7 +49,6 @@ As the largest Greenplum contributer, Pivotal has a lot of open source projects 
 - [[https://github.com/greenplum-db/plcontainer][pl/container]] - PL/Container is GPDB execution sandboxing for Python and R
 - [[https://github.com/greenplum-db/diskquota][diskquota]] - PostgreSQL disk quota extension
 
-* Monitor
 
 * Performance test
 - [[https://github.com/pivotalguru/TPC-H][tpc-h]] - Traditional OLAP test.
@@ -94,6 +90,7 @@ This section list all ETL(extract-transform-load) and CDC (changed-data capture)
 - [[https://github.com/pivotalguru/gplink][gplink]] - GPLink links JDBC connections to Greenplum External Tables.
 - [[https://github.com/pentaho/pentaho-kettle][kettle]] - Pentaho Data Integration ( ETL ) a.k.a Kettle
 ** as source
+TO BO FINISHED
 
 * Procedural Language
 Greenplum ship pl/tcl, pl/perl, pl/pgsql and pl/python together with its source code. Below are the available procedural languages.
@@ -111,9 +108,9 @@ Greenplum ship pl/tcl, pl/perl, pl/pgsql and pl/python together with its source 
 - [[https://github.com/zeromax007/gpdb-roaringbitmap][roaring bitmap]] - RoaringBitmap extension for greenplum-db
 * Postgres Extension 
 Most postgres extensions can work on Greenplum so long as it is not MPP sensitive. It can run on master node just as what it does for Postgres by default.
-** fdw
+** fdw of pg
 - [[https://wiki.postgresql.org/wiki/Foreign_data_wrappers][fdw list]] - this is the fdw extension list on Postgres wiki site
-** etl
+** etl of pg
 - [[https://github.com/yandex/pgmigrate][pgmigrate]] - Simple tool to evolve PostgreSQL schema easily.
 - [[https://github.com/the4thdoctor/pg_chameleon][pg_chameleon]] - MySQL to PostgreSQL replica system 
 - [[https://github.com/flyway/flyway][flyway]] - Data base migration tools. Support a lot of kinds of databases.
@@ -126,7 +123,7 @@ Most postgres extensions can work on Greenplum so long as it is not MPP sensitiv
 - [[https://github.com/lukasmartinelli/pgfutter][pgfutter]] - Import CSV and JSON into PostgreSQL the easy way
 - [[https://github.com/lanyrd/mysql-postgresql-converter][mysql-postgresql-converter]] - Lanyrd's MySQL to PostgreSQL conversion script.
 
-** moniter
+** moniter of pg
 - [[https://github.com/julmon/pg_activity][pg_activity]] - pg_activity is a top like application for PostgreSQL server activity monitoring.
 - [[https://github.com/cybertec-postgresql/pgwatch2][pgwatch2]] - PostgreSQL metrics monitor/dashboard
 - [[https://github.com/zalando/pg_view][pg_view]] - Get a detailed, real-time view of your PostgreSQL database and system metrics
@@ -143,7 +140,7 @@ Most postgres extensions can work on Greenplum so long as it is not MPP sensitiv
 - [[https://gitlab.com/postgres-ai/postgres-checkup][postgres-checkup]] - Postgres Health Check and SQL Performance Analysis.
 - [[https://github.com/kirs/pg_web_stats][pg_web_stats]] - Web UI to view pg_stat_statements
 
-** Develop
+** development of pg
 - [[https://github.com/okbob/plpgsql_check][plpgsql_check]] - plpgsql_check is next generation of plpgsql_lint. It allows to check source code by explicit call plpgsql_check_function.
 - [[https://github.com/theory/pgtap/][pgtap]] - PostgreSQL Unit Testing Suite 
 - [[https://github.com/jarulraj/sqlcheck-old][sqlcheck]] - Automatically identify anti-patterns in SQL queries
@@ -151,17 +148,17 @@ Most postgres extensions can work on Greenplum so long as it is not MPP sensitiv
 - [[https://github.com/PostgREST/postgrest][postgrest]] - REST API for any Postgres database
 - [[https://github.com/prest/prest][prest]] - pREST is a way to serve a RESTful API from any databases written in Go
 
-** Utility
+** utility of pg
 - [[https://github.com/cbbrowne/pgcmp][pgcmp]] - Tool for comparing Postgres database schemas
 - [[https://github.com/sqitchers/sqitch][sqitch]] - Sane database change management 
 - [[https://github.com/darold/pgbadger][pgbadger]] - Fast PostgreSQL Log Analyzer.
 - [[https://github.com/fordfrog/apgdiff][apgdiff]] - Another PostgreSQL Diff Tool 
 - [[https://github.com/pgxn/pgxnclient][pgxnclient]] - A command line client for the PostgreSQL Extension Network.
 
-** Backup
+** backup of pg
 TO BE FINISHED
 
-** Audit
+** audit of pg
 - [[https://github.com/pgMemento/pgMemento][pgMemento]] - Audit trail with schema versioning for PostgreSQL using transaction-based logging
 - [[https://bitbucket.org/neadwerx/cyanaudit][cyanaudit]] - Cyan Audit is a PostgreSQL utility providing comprehensive and easily-searchable logs of DML (INSERT/UPDATE/DELETE) activity in your database.
 - [[https://github.com/pgaudit/pgaudit][pgaudit]] - PostgreSQL Audit Extension

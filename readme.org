@@ -35,8 +35,9 @@ This repo is under GPL v3.
   - [[#fdw][fdw]]
   - [[#etl][etl]]
   - [[#moniter][moniter]]
-  - [[#utility-1][Utility]]
   - [[#develop][Develop]]
+  - [[#utility-1][Utility]]
+  - [[#backup][Backup]]
   - [[#audit][Audit]]
 - [[#community][Community]]
 
@@ -109,8 +110,7 @@ Greenplum ship pl/tcl, pl/perl, pl/pgsql and pl/python together with its source 
 ** Index
 - [[https://github.com/zeromax007/gpdb-roaringbitmap][roaring bitmap]] - RoaringBitmap extension for greenplum-db
 * Postgres Extension 
-Greenplum is based on Postgres which means it shares the same kernel function  with as Postgres with related version number. Most postgres extensions can work on Greenplum so long as it is not MPP sensitive. It can run on master node just as what it does for Postgres by default.
-Note: there is no guarantee that those extensions can work well on whole Greenplum cluster.
+Most postgres extensions can work on Greenplum so long as it is not MPP sensitive. It can run on master node just as what it does for Postgres by default.
 ** fdw
 - [[https://wiki.postgresql.org/wiki/Foreign_data_wrappers][fdw list]] - this is the fdw extension list on Postgres wiki site
 ** etl
@@ -125,7 +125,6 @@ Note: there is no guarantee that those extensions can work well on whole Greenpl
 - [[https://github.com/jwdeitch/pg_migrate][pg_migrate]] - Manage postgres schema, triggers, procedures, and views.
 - [[https://github.com/lukasmartinelli/pgfutter][pgfutter]] - Import CSV and JSON into PostgreSQL the easy way
 - [[https://github.com/lanyrd/mysql-postgresql-converter][mysql-postgresql-converter]] - Lanyrd's MySQL to PostgreSQL conversion script.
-
 
 ** moniter
 - [[https://github.com/julmon/pg_activity][pg_activity]] - pg_activity is a top like application for PostgreSQL server activity monitoring.
@@ -144,28 +143,30 @@ Note: there is no guarantee that those extensions can work well on whole Greenpl
 - [[https://gitlab.com/postgres-ai/postgres-checkup][postgres-checkup]] - Postgres Health Check and SQL Performance Analysis.
 - [[https://github.com/kirs/pg_web_stats][pg_web_stats]] - Web UI to view pg_stat_statements
 
-
-** Utility
-- [[https://github.com/cbbrowne/pgcmp][pgcmp]] - Tool for comparing Postgres database schemas
-- [[https://github.com/sqitchers/sqitch][sqitch]] - Sane database change management 
-- [[https://github.com/PostgREST/postgrest][postgrest]] - REST API for any Postgres database
-- [[https://github.com/prest/prest][prest]] - pREST is a way to serve a RESTful API from any databases written in Go
-- [[https://github.com/darold/pgbadger][pgbadger]] - Fast PostgreSQL Log Analyzer.
-- [[https://github.com/fordfrog/apgdiff][apgdiff]] - Another PostgreSQL Diff Tool 
-- [[https://github.com/pgxn/pgxnclient][pgxnclient]] - A command line client for the PostgreSQL Extension Network.
-
 ** Develop
 - [[https://github.com/okbob/plpgsql_check][plpgsql_check]] - plpgsql_check is next generation of plpgsql_lint. It allows to check source code by explicit call plpgsql_check_function.
 - [[https://github.com/theory/pgtap/][pgtap]] - PostgreSQL Unit Testing Suite 
 - [[https://github.com/jarulraj/sqlcheck-old][sqlcheck]] - Automatically identify anti-patterns in SQL queries
 - [[https://github.com/gajus/pg-formatter][pg-formatter]] - A PostgreSQL SQL syntax beautifier.
+- [[https://github.com/PostgREST/postgrest][postgrest]] - REST API for any Postgres database
+- [[https://github.com/prest/prest][prest]] - pREST is a way to serve a RESTful API from any databases written in Go
 
+** Utility
+- [[https://github.com/cbbrowne/pgcmp][pgcmp]] - Tool for comparing Postgres database schemas
+- [[https://github.com/sqitchers/sqitch][sqitch]] - Sane database change management 
+- [[https://github.com/darold/pgbadger][pgbadger]] - Fast PostgreSQL Log Analyzer.
+- [[https://github.com/fordfrog/apgdiff][apgdiff]] - Another PostgreSQL Diff Tool 
+- [[https://github.com/pgxn/pgxnclient][pgxnclient]] - A command line client for the PostgreSQL Extension Network.
+
+** Backup
+TO BE FINISHED
 
 ** Audit
 - [[https://github.com/pgMemento/pgMemento][pgMemento]] - Audit trail with schema versioning for PostgreSQL using transaction-based logging
 - [[https://bitbucket.org/neadwerx/cyanaudit][cyanaudit]] - Cyan Audit is a PostgreSQL utility providing comprehensive and easily-searchable logs of DML (INSERT/UPDATE/DELETE) activity in your database.
 - [[https://github.com/pgaudit/pgaudit][pgaudit]] - PostgreSQL Audit Extension
 - [[https://github.com/kvesteri/postgresql-audit][postgresql-audit]] - Audit trigger for PostgreSQL
+
 
 * Community
 - [[https://greenplum.org/][greenplum.org]] - official website of Greenplum

@@ -56,6 +56,8 @@ As the largest Greenplum contributer, Pivotal has a lot of open source projects 
 - [[https://github.com/pivotalguru/TPC-DS][tpc-ds]] - Data warehouse test.
 - pgbench - Bundled TPC-B performance tools for Postgres and Greenplum.
 - [[https://github.com/akopytov/sysbench][sysbench]] - Performance test utility for postgres, mysql, CUP, memory, IO, etc.
+- [[https://github.com/Percona-Lab/sysbench-tpcc][sysbench-tpcc]] - Sysbench scripts to generate a tpcc-like workload for MySQL and PostgreSQL
+
 
 * Client tool
 - psql - Bundled official client tool
@@ -77,6 +79,7 @@ Most drivers of Postgres can work well with Greenplum.
 - [[https://github.com/jackc/pgx][pgx]] - Another pure Go driver and toolkit for PostgreSQL.
 - [[http://initd.org/psycopg/][psycopg 2]] - Psycopg is the most popular PostgreSQL adapter for the Python programming language. At its core it fully implements the Python DB API 2.0 specifications.
 - [[https://github.com/MagicStack/asyncpg][asyncpg]] - A fast PostgreSQL Database Client Library for Python/asyncio.
+- [[https://github.com/aio-libs/aiopg][aiopg]] - aiopg is a library for accessing a PostgreSQL database from the asyncio.
 - [[https://github.com/gmr/queries][queries]] - Queries is a BSD licensed opinionated wrapper of the psycopg2 library for interacting with PostgreSQL.
 
 * Connection Pool

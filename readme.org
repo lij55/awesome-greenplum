@@ -159,7 +159,7 @@ Most postgres extensions can work on Greenplum so long as it is not MPP sensitiv
 - [[https://github.com/pgxn/pgxnclient][pgxnclient]] - A command line client for the PostgreSQL Extension Network.
 
 ** Backup
-TO BE FINISHED
+[[https://github.com/2ndquadrant-it/barman/][barman]] - BaRMan - Backup and Recovery Manager for PostgreSQL
 
 ** Audit
 - [[https://github.com/pgMemento/pgMemento][pgMemento]] - Audit trail with schema versioning for PostgreSQL using transaction-based logging

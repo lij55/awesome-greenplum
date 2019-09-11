@@ -111,6 +111,8 @@ Greenplum ship pl/tcl, pl/perl, pl/pgsql and pl/python together with its source 
 - [[https://github.com/zeromax007/gpdb-roaringbitmap][roaring bitmap]] - RoaringBitmap extension for greenplum-db
 * Postgres Extension 
 Most postgres extensions can work on Greenplum so long as it is not MPP sensitive. It can run on master node just as what it does for Postgres by default.
+
+Some components come from [[https://github.com/dhamaniasad/awesome-postgres][awesome-postgres]].
 ** fdw
 - [[https://wiki.postgresql.org/wiki/Foreign_data_wrappers][fdw list]] - this is the fdw extension list on Postgres wiki site
 ** etl

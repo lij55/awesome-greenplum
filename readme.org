@@ -117,6 +117,8 @@ Greenplum ship pl/tcl, pl/perl, pl/pgsql and pl/python together with its source 
 - [[https://github.com/zeromax007/gpdb-roaringbitmap][roaring bitmap]] - RoaringBitmap extension for greenplum-db
 * Postgres Ecosystem
 Most postgres extensions can work on Greenplum so long as it is not MPP sensitive. It can run on master node just as what it does for Postgres by default.
+
+Some components come from [[https://github.com/dhamaniasad/awesome-postgres][awesome-postgres]].
 ** fdw of pg
 - [[https://wiki.postgresql.org/wiki/Foreign_data_wrappers][fdw list]] - this is the fdw extension list on Postgres wiki site
 ** etl of pg
@@ -171,8 +173,9 @@ Most postgres extensions can work on Greenplum so long as it is not MPP sensitiv
 - [[https://gitlab.com/dalibo/postgresql_anonymizer][postgresql_anonymizer]] - postgresql_anonymizer is an extension to mask or replace personally identifiable information (PII) or commercially sensitive data from a PostgreSQL database.
 - [[https://github.com/orafce/orafce][orafce]] - The "orafce" project implements of some functions from the Oracle database.
 
+
 ** backup of pg
-TO BE FINISHED
+[[https://github.com/2ndquadrant-it/barman/][barman]] - BaRMan - Backup and Recovery Manager for PostgreSQL
 
 ** audit of pg
 - [[https://github.com/pgMemento/pgMemento][pgMemento]] - Audit trail with schema versioning for PostgreSQL using transaction-based logging
